@@ -1,0 +1,21 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["next/core-web-vitals", "next", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "modules",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "amd": true,
+    "browser": true,
+    "es2021": true
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "never"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }]
+  }
+}
